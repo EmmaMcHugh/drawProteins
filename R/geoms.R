@@ -161,7 +161,7 @@ draw_domains <- function(p,
                         xmax=end,
                         ymin=order-0.2,
                         ymax=order+0.2,
-                        fill=description,
+                        fill=description),
                         show.legend = show.legend)
 
     if(label_domains == TRUE){
