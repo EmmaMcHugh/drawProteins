@@ -151,8 +151,6 @@ draw_domains <- function(p,
                         data = data,
                         label_domains = TRUE,
                         label_size = 4,
-                        colour = "black", 
-                        size = 0.5,
                         show.legend = TRUE,
                         type = "DOMAIN"){
     begin=end=description=NULL
@@ -161,7 +159,9 @@ draw_domains <- function(p,
                         xmax=end,
                         ymin=order-0.2,
                         ymax=order+0.2,
-                        fill=description),
+                        fill=description, 
+                        colour = "black", 
+                        size = 0.5),
                         show.legend = show.legend)
 
     if(label_domains == TRUE){
