@@ -157,8 +157,8 @@ draw_domains <- function(p,
     p <- p + ggplot2::geom_rect(data= data[data$type == type,],
             mapping=ggplot2::aes(xmin=begin,
                         xmax=end,
-                        ymin=order-0.25,
-                        ymax=order+0.25,
+                        ymin=order,
+                        ymax=order,
                         fill=description),
                         show.legend = show.legend)
 
