@@ -159,6 +159,8 @@ draw_domains <- function(p,
                         xmax=end,
                         ymin=order-0.2,
                         ymax=order+0.2,
+                        outline = "black", 
+                        size = 0.5,
                         fill=description),
                         show.legend = show.legend)
 
