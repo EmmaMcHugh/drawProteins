@@ -135,6 +135,7 @@ draw_chains <- function(p,
 #' @param label_size Size of the text used for labels.
 #' @param show.legend Option to include legend in this layer
 #' @param type Can change to show other protein features
+#' @param outline Colour of the outline of each domain.
 #' @return A ggplot2 object either in the plot window or as an object with an
 #' additional geom_rect layer.
 #'
@@ -152,6 +153,7 @@ draw_domains <- function(p,
                         label_domains = TRUE,
                         label_size = 4,
                         show.legend = TRUE,
+                        outline = "black",
                         type = "DOMAIN"){
     begin=end=description=NULL
     p <- p + ggplot2::geom_rect(data= data[data$type == type,],
@@ -159,9 +161,7 @@ draw_domains <- function(p,
                         xmax=end,
                         ymin=order-0.2,
                         ymax=order+0.2,
-                        fill=description, 
-                        colour = "black", 
-                        size = 0.5),
+                        fill=description,
                         show.legend = show.legend)
 
     if(label_domains == TRUE){
